@@ -52,10 +52,12 @@ struct ContentView: View {
 
                 Section(header: Text("Total amount")) {
                     Text("£\(totalAmount, specifier: "%.2f")")
+                        .foregroundColor(tipSelection == 0 ? .red : nil)
                 }
 
                 Section(header: Text("Amount per person")) {
                     Text("£\(amountPerPerson, specifier: "%.2f")")
+                        .foregroundColor(tipSelection == 0 ? .red : nil)
                 }
             }
             .navigationBarTitle("WeSplit")
